@@ -1,12 +1,12 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: pink;
-  color: pink;
+  background-color: #000;
+  color: #fff;
 }
 
 .navbar-laravel {
-  background-color: pink;
+  background-color: #000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -32,9 +32,10 @@ body {
 }
 
 .login-header {
-  background-color: rgba(0, 0, 0, 0.25)
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .login-body {
   background-color: rgba(0, 0, 0, 0.25);
 }
+

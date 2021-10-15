@@ -11,4 +11,9 @@ class KdramaController extends Controller
   {
       return view('admin.kdrama.create');
   }
+  
+   public function create()
+  {
+      return redirect('admin.kdrama.create');
+  }
 }
