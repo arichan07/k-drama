@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin'], function() {
     Route::get('kdrama/create', 'Admin\KdramaController@add')->middleware('auth');
+    Route::post('kdrama/create', 'Admin\KdramaController@create')->middleware('auth');
 });
 
 Auth::routes();
