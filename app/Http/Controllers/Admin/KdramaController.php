@@ -17,23 +17,22 @@ class KdramaController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, Kdrama::$rules);
-        ​
         $kdrama = new Kdrama;
         $form = $request->all();
-        ​
+        
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
-            $news->image_path = basename($path);
+            $kdrama->image_path = basename($path);
         } else {
             $kdrama->image_path = null;
         }
-        ​
+        
         unset($form['_token']);
         unset($form['image']);
-        ​
+        
         $kdrama->fill($form);
         $kdrama->save();
         
-        return redirect('admin.kdrama.create');
+        return redirect('admin/kdrama/create');
     }
 }
