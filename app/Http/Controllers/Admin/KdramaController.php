@@ -8,13 +8,13 @@ use App\Http\Controllers\Controller;
 class KdramaController extends Controller
 {
     public function add()
-  {
-      return view('admin.kdrama.create');
-  }
+    {
+        return view('admin.kdrama.create');
+    }
   
-   public function create(Request $request)
-  {
-      return redirect('admin.kdrama.create');
-  }
+    public function create(Request $request)
+    {
+        return redirect('admin.kdrama.create');
+    }
   
 }
