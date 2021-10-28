@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Kdrama;
+use App\Drama;
 
 
 class KdramaController extends Controller
@@ -17,9 +17,9 @@ class KdramaController extends Controller
     public function create(Request $request)
     {
 
-        $this->validate($request, Kdrama::$rules);
+        $this->validate($request, Drama::$rules);
         
-        $news = new Kdrama();
+        $kdrama = new Drama();
         $form = $request->all();
         
         if (isset($form['image'])) {
@@ -42,9 +42,9 @@ class KdramaController extends Controller
     {
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
-            $posts = Kdrama::where('title', $cond_title)->get();
+            $posts = Drama::where('title', $cond_title)->get();
         } else {
-            $posts = Kdrama::all();
+            $posts = Drama::all();
         }
         return view('admin.kdrama.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
@@ -53,7 +53,7 @@ class KdramaController extends Controller
     public function edit(Request $request)
     {
 
-        $kdrama = Kdrama::find($request->id);
+        $kdrama = Drama::find($request->id);
         if (empty($kdrama)) {
             abort(404);    
     }
@@ -64,8 +64,8 @@ class KdramaController extends Controller
     public function update(Request $request)
     {
       
-        $this->validate($request, Kdrama::$rules);
-        $kdrama = Kdrama::find($request->id);
+        $this->validate($request, Drama::$rules);
+        $kdrama = Drama::find($request->id);
         $kdrama_form = $request->all();
         unset($kdrama_form['_token']);
         
