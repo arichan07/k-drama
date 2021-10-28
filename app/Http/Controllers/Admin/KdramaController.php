@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Kdrama; 
@@ -34,5 +32,17 @@ class KdramaController extends Controller
         $kdrama->save();
         
         return redirect('admin/kdrama/create');
+    }
+    
+    public function index(Request $request)
+    {
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            $posts = Kdrama::where('title', $cond_title)->get();
+        } else {
+
+            $posts = Kdrama::all();
+        }
+        return view('admin.kdrama.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 }
