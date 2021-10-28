@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kdarama extends Model
+class Kdrama extends Model
 {
     protected $guarded = array('id');
 
