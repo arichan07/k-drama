@@ -6,7 +6,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
 
-    Route::get('/home', 'HomeController@index')->name('home');
     Route::get('kdrama', 'Admin\KdramaController@index')->middleware('auth'); 
     Route::get('kdrama/create', 'Admin\KdramaController@add')->middleware('auth');
     Route::get('kdrama/edit', 'Admin\KdramaController@edit')->middleware('auth');
@@ -17,6 +16,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 Auth::routes();
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'ToppageController@index');
