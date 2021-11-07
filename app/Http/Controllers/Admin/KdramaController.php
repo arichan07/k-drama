@@ -82,7 +82,7 @@ class KdramaController extends Controller
         unset($kdrama_form['_token']);
 
         $kdrama->fill($kdrama_form)->save();
-        return redirect('admin/kdrama');
+        return redirect('admin/kdrama/');
 }
     
     
@@ -90,6 +90,6 @@ class KdramaController extends Controller
     { 
         $kdrama = Drama::find($request->id);
         $kdrama->delete();
-        return redirect('admin/kdrama');
+        return redirect('admin/kdrama/');
     }
 }

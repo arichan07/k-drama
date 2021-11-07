@@ -44,10 +44,12 @@
                                     <td>{{ str_limit($kdrama->title, 100) }}</td>
                                     <td>{{ str_limit($kdrama->body, 250) }}</td>
                                     <td>{{ str_limit($kdrama->val, 2) }}</td>
-                                    <td>{{ str_limit($kdrama->image_path, 64) }}</td>
+                                    <td>{{ str_limit($kdrama->image_path, 60) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\KdramaController@edit', ['id' => $kdrama->id]) }}">編集</a>
+                                        </div>
+                                            <a href="{{ action('Admin\KdramaController@delete', ['id' => $kdrama->id]) }}">削除</a>
                                         </div>
                                     </td>
                                 </tr>
