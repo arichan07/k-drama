@@ -34,7 +34,7 @@
                                 <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
                                 <th width="50%">本文</th>
-                                <th width="10%">操作</th>
+                                <th width="10%">評価</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +43,8 @@
                                     <th>{{ $kdrama->id }}</th>
                                     <td>{{ str_limit($kdrama->title, 100) }}</td>
                                     <td>{{ str_limit($kdrama->body, 250) }}</td>
+                                    <td>{{ str_limit($kdrama->val, 2) }}</td>
+                                    <td>{{ str_limit($kdrama->image_path, 64) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\KdramaController@edit', ['id' => $kdrama->id]) }}">編集</a>

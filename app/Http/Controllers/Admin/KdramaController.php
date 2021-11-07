@@ -16,7 +16,6 @@ class KdramaController extends Controller
 
     public function create(Request $request)
     {
-
         $this->validate($request, Drama::$rules);
         
         $kdrama = new Drama();
@@ -52,25 +51,45 @@ class KdramaController extends Controller
 
     public function edit(Request $request)
     {
-
         $kdrama = Drama::find($request->id);
         if (empty($kdrama)) {
             abort(404);    
-    }
+        }
         return view('admin.kdrama.edit', ['kdrama_form' => $kdrama]);
     }
 
-
     public function update(Request $request)
-    {
-      
+    { 
         $this->validate($request, Drama::$rules);
         $kdrama = Drama::find($request->id);
+        if (empty($kdrama)) {
+            abort(404);    
+        }
+        
         $kdrama_form = $request->all();
+        
+        if ($request->remove == 'true') {
+            $kdrama_form['image_path'] = null;
+        } elseif ($request->file('image')) {
+            $path = $request->file('image')->store('public/image');
+            $kdrama_form['image_path'] = basename($path);
+        } else {
+            $kdrama_form['image_path'] = $kdrama->image_path;
+        }
+
+        unset($kdrama_form['image']);
+        unset($kdrama_form['remove']);
         unset($kdrama_form['_token']);
-        
+
         $kdrama->fill($kdrama_form)->save();
-        
+        return redirect('admin/kdrama');
+}
+    
+    
+    public function delete(Request $request)
+    { 
+        $kdrama = Drama::find($request->id);
+        $kdrama->delete();
         return redirect('admin/kdrama');
     }
 }
