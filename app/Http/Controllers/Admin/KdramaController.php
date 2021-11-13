@@ -13,6 +13,7 @@ class KdramaController extends Controller
     {
         return view('admin.kdrama.create');
     }
+    
 
     public function create(Request $request)
     {
@@ -23,7 +24,8 @@ class KdramaController extends Controller
         
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
-            $kdrama->image_path = basename($path);
+//            $kdrama->image_path = basename($path);
+            $kdrama->image_path = $path;
         } else {
             $kdrama->image_path = null;
         }
@@ -34,8 +36,9 @@ class KdramaController extends Controller
         $kdrama->fill($form);
         $kdrama->save();
 
-        return redirect('admin/kdrama/create');
+        return redirect('admin/kdrama/');
     }
+    
 
     public function index(Request $request)
     {
@@ -57,6 +60,7 @@ class KdramaController extends Controller
         }
         return view('admin.kdrama.edit', ['kdrama_form' => $kdrama]);
     }
+    
 
     public function update(Request $request)
     { 
@@ -72,7 +76,8 @@ class KdramaController extends Controller
             $kdrama_form['image_path'] = null;
         } elseif ($request->file('image')) {
             $path = $request->file('image')->store('public/image');
-            $kdrama_form['image_path'] = basename($path);
+            //$kdrama_form['image_path'] = basename($path);
+            $kdrama_form['image_path'] = $path;
         } else {
             $kdrama_form['image_path'] = $kdrama->image_path;
         }
@@ -83,7 +88,7 @@ class KdramaController extends Controller
 
         $kdrama->fill($kdrama_form)->save();
         return redirect('admin/kdrama/');
-}
+    }
     
     
     public function delete(Request $request)
