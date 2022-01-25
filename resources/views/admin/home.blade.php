@@ -1,3 +1,4 @@
+@extends('layouts.app.admin')
 <div class="card-header">
     @guest
         Laravel

@@ -95,6 +95,6 @@ class KdramaController extends Controller
     { 
         $kdrama = Drama::find($request->id);
         $kdrama->delete();
-        return redirect('admin/kdrama/');
+        return redirect()->to('admin/kdrama/');
     }
 }
