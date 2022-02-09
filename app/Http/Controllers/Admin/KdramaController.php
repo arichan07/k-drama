@@ -34,6 +34,7 @@ class KdramaController extends Controller
         unset($form['image']);
         
         $kdrama->fill($form);
+        $kdrama->user_id=\Auth::id();
         $kdrama->save();
 
         return redirect('admin/kdrama/');

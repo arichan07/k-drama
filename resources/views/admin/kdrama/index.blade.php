@@ -52,11 +52,13 @@
                                     
                                     <td><img class="product_image" src="{{ Storage::url($kdrama->image_path) }}" alt="" width="200px" height="300px"></td>
                                     <td>
+                                    @if($kdrama->user_id==Auth::id())
                                         <div>
                                             <a href="{{ action('Admin\KdramaController@edit', ['id' => $kdrama->id]) }}">編集</a>
                                         </div>
                                             <a href="{{ action('Admin\KdramaController@delete', ['id' => $kdrama->id]) }}" onclick="return confirm('削除しますか？');">削除</a>
-                                        </div
+                                        </div>
+                                    @endif    
                                     </td>
                                 </tr>
                             @endforeach
