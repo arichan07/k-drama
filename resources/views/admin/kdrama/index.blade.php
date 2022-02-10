@@ -3,17 +3,10 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <h2>ドラマ一覧</h2>
-        </div>
-        <div class="row">
+    　　<div class="row">
             <div class="col-md-3">
                 <a href="{{ action('Admin\KdramaController@add') }}" role="button" class="btn btn-primary">新規作成</a>
-            </div>
-            <div class="col-md-3">
-                <a href="{{ action('Admin\KdramaController@add') }}" role="button" class="btn btn-primary">ログイン</a>
-            </div>    
-            <div class="col-md-8">
+            </div><div class="col-md-8">
                 <form action="{{ action('Admin\KdramaController@index') }}" method="get">
                     <div class="form-group row">
                         <label class="col-md-3">ドラマタイトル</label>
@@ -27,6 +20,9 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="row">
+            <h2>ドラマ一覧</h2>
         </div>
         <div class="row">
             <div class="admin-news col-md-12 mx-auto">

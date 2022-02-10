@@ -18,6 +18,13 @@ body {
   color: #fff !important;
 }
 
+.navbar-toggler {
+  display: flex;
+}
+.navbar-toggler {
+  margin-left: auto;
+}
+
 .table-dark {
   color: #fff;
 }
