@@ -382,7 +382,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -622,8 +622,8 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .no-gutters {
@@ -1186,7 +1186,7 @@ pre code {
 
   .col-md-3 {
     flex: 0 0 25%;
-    max-width: 25%;
+    max-width: 19%;
   }
 
   .col-md-4 {
@@ -1966,7 +1966,7 @@ pre code {
 .table-light td,
 .table-light thead th,
 .table-light tbody + tbody {
-  border-color: #fbfcfc;
+  border-color: black;
 }
 
 .table-hover .table-light:hover {

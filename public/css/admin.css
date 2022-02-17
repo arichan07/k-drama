@@ -1,21 +1,21 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: pink;
+  background-color: white;
   color: black;
 }
 
 .navbar-laravel {
-  background-color: pink;
+  background-color: light;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-brand {
-  color: #fff !important;
+  color: black !important;
 }
 
 .nav-link {
-  color: #fff !important;
+  color: black !important;
 }
 
 .navbar-toggler {
@@ -25,8 +25,8 @@ body {
   margin-left: auto;
 }
 
-.table-dark {
-  color: #fff;
+.table-light {
+  color: black;
 }
 
 .list-group-item {
