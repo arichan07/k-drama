@@ -66,9 +66,9 @@ section {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Arial Black", 'M PLUS Rounded 1c', sans-serif;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.6;
   color: #24292e;
   text-align: left;
@@ -4530,12 +4530,13 @@ input[type=button].btn-block {
 }
 
 .navbar-brand {
-  display: inline-block;
+  display: blue;
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
-  margin-right: 1rem;
-  font-size: 1.125rem;
-  line-height: inherit;
+  margin-right: 65rem;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
@@ -4869,7 +4870,7 @@ input[type=button].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: blue(0, 0, 0, 0.9);
 }
 
 .navbar-light .navbar-brand:hover,

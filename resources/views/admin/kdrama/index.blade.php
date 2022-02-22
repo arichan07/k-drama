@@ -10,7 +10,6 @@
             <div class="col-md-8">
                 <form action="{{ action('Admin\KdramaController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-3">ドラマタイトル</label>
                         <div class="col-md-5">
                             <input type="text" class="form-control" name="cond_title" value={{ $cond_title }}>
                         </div>
@@ -21,9 +20,6 @@
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="row">
-            <h2>ドラマ一覧</h2>
         </div>
         <div class="row">
             <div class="admin-news col-md-12 mx-auto">
