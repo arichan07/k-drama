@@ -121,7 +121,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 ol ol,
@@ -382,9 +382,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-bottom: 2rem;
-  font-weight: 500;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 2;
 }
 
 h1,
@@ -394,7 +394,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 h3,

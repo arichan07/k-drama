@@ -19,6 +19,7 @@
     <body style="padding-top:4.5rem;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="/admin/kdrama">K-POST</a>
+            <ul>
                 
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
@@ -36,9 +37,9 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                            @endguest
-                        </ul>
+                </li>
+                @endguest
+            </ul>
                     </div>
                 </div>
             </nav>
