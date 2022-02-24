@@ -35,9 +35,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">コメント</label>
+                        <label class="col-md-2">レビュー</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ $kdrama_form->body }}</textarea>
+                            <textarea class="form-control" name="body" rows="10">{{ $kdrama_form->body }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -62,7 +62,9 @@
                         <div class="col-md-10">
                             <input type="hidden" name="id" value="{{ $kdrama_form->id }}">
                             {{ csrf_field() }}
-                            <input type="submit" class="btn btn-primary" value="更新">
+                            <div style="text-align: center;">
+                                <input type="submit" class="btn btn-primary" value="更新"> 
+                            </div>    
                         </div>
                     </div>
                 </form>

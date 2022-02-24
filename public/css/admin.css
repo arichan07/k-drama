@@ -11,11 +11,11 @@ body {
 }
 
 .navbar-brand {
-  color: blue;
+  color: #3490dc;
 }
 
 .nav-link {
-  color: black !important;
+  color: #6C757D !important;
 }
 
 .navbar-toggler {

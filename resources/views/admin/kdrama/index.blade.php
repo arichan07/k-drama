@@ -29,7 +29,7 @@
                             <tr>
                                 <th width="10%">ID</th>
                                 <th width="20%">ドラマタイトル</th>
-                                <th width="40%">本文</th>
+                                <th width="40%">レビュー</th>
                                 <th width="10%">評価</th>
                                 <th width="10%">画像</th>
                                 <th width="10%">操作</th>
