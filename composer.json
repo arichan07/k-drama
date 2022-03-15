@@ -20,7 +20,8 @@
         "phpunit/phpunit": "~6.0",
         "symfony/thanks": "^1.0",
         "panique/laravel-sass": "dev-master"
-        "config": {
+    },
+    "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
